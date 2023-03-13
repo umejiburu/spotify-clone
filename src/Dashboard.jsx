@@ -39,14 +39,12 @@ function Dashboard() {
       const data = await response.json();
 
       setTrackData(data);
-      console.log(trackData);
     } catch (error) {
       console.log(error);
     }
   };
-
+  
   useEffect(() => {
-    console.log("data: " + trackData);
     fetchMusic();
     // setSearch(searchQuery);
   }, [searchQuery]);
@@ -56,7 +54,7 @@ function Dashboard() {
   return (
     <>
         <LeftMenu searchValue={searchValue} setSearchValue={setSearchValue} />
-        <MainContainer/>
+        <MainContainer trackData={trackData} />
         <RightMenu/>
     </>
   )

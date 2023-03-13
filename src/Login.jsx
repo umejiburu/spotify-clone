@@ -31,8 +31,10 @@ function Login() {
   return (
     <>
     {!token ?
-    <div>
-      <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>Login</a>
+    <div className='loginWrapper'>
+      <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>
+        <h1>Login</h1>
+      </a>
     
     </div>
     :

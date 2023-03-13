@@ -1,6 +1,7 @@
 import React from 'react'
 
-function PlaylistComp() {
+function PlaylistComp(trackData) {
+
   return (
     <div className='playlistComp'>
       <h2>My Playlist</h2>
@@ -16,29 +17,22 @@ function PlaylistComp() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td className='number'>1</td>
-            <td>No wahalssa</td>
-            <td>Kelly</td>
-            <td>1:30</td>
-            <td>Kell Gold</td>
-          </tr>
+          {
+            trackData?.items?.map((item, index) => (
+              (
+                <React.Fragment key={item.id}>
+                  <tr>
+                    <td className='number'>{index + 1}</td>
+                    <td>{item.name}</td>
+                    <td>{item.artists[0].name}</td>
+                    <td>1:30</td>
+                    <td>Kell Gold</td>
+                  </tr>
+                </React.Fragment>
+              )
+            ))
+          }
 
-          <tr>
-          <td className='number'>1</td>
-            <td>No wahalssa</td>
-            <td>Kelly</td>
-            <td>1:30</td>
-            <td>Kell Gold</td>
-          </tr>
-
-          <tr>
-          <td className='number'>1</td>
-            <td>No wahalssa</td>
-            <td>Kelly</td>
-            <td>1:30</td>
-            <td>Kell Gold</td>
-          </tr>
         </tbody>
       </table>
 

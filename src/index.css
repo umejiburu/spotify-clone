@@ -304,8 +304,18 @@ font-size: 18px;
 
 
 
+/* Login */
+.loginWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-
+.loginWrapper a {
+  width: 50px;
+  color: #fff;
+}
 
 /* mainContainer */
 .mainContainer{
